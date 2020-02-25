@@ -20,4 +20,8 @@ class Property extends Model
     {
         return 'guid';
     }
+
+    public function analytics(){
+        return $this->hasMany('App\PropertyAnalytic', 'property_id', 'id');
+    }
 }
